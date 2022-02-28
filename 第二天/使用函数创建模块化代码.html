@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <script>
+      //Task 1
+
+      function showMessage(name) {
+        return "你好！" + name;
+      }
+
+      //Task 2
+      document.write(showMessage("Sally"));
+
+      //Task 3
+      let name = prompt("您的名字是？");
+      let showMessage1 = function () {
+        alert("您好！" + name);
+      };
+
+      setTimeout(showMessage1(), 3000);
+
+      //Task 4 体温打卡
+      let temperature = prompt("请输入您的体温");
+      function temperatureBodyDetection(success, fail) {
+        if (temperature >= 36 && temperature <= 38) {
+          success();
+        } else {
+          fail();
+        }
+      }
+
+      var success = () => {
+        alert("体温正常，打卡成功！");
+      };
+      var fail = () => {
+        alert("体温异常，打卡失败！");
+      };
+
+      temperatureBodyDetection(success, fail); /**调用打卡函数**/
+    </script>
+  </body>
+</html>
